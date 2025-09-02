@@ -5,7 +5,7 @@ import random
 import logging
 
 logging.basicConfig(
-    filename='./logs/my_application.log',
+    filename='./logs/api.log',
     filemode='a',
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s'
