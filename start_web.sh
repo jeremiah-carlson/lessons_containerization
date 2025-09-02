@@ -11,4 +11,10 @@ fi
 "$eng" container stop "$container" || true
 "$eng" container rm "$container" || true
 
-"$eng" run -d --name "$container" -p 80:80 "$img"
+
+
+if [[ "$in_net" == "yes" ]]; then
+    "$eng" run -d --name "$container" --network app_net --ip 198.168.55.2 -p 80:80 "$img"
+else
+    "$eng" run -d --name "$container" -p 80:80 "$img"
+fi

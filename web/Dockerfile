@@ -1,4 +1,4 @@
-FROM nginx:1.23-alpine3.17
+FROM docker.io/library/nginx:1.23-alpine3.17
 
 # Static Files
 RUN mkdir /usr/local/www
