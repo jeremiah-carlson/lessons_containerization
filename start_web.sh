@@ -3,6 +3,7 @@ eng=podman
 container=demo_web
 img=demo_web
 rebuild=yes
+in_net=no
 
 if [[ "$rebuild" == "yes" ]]; then
     "$eng" build -t "$img" ./web/
